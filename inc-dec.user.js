@@ -8,7 +8,7 @@
 // ==/UserScript==
 // 
 
-// Cool
+// Cool raoul
 
 document.onkeypress=function (e) { 
 	e=e || window.event; 
