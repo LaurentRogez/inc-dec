@@ -30,7 +30,7 @@ function url(){
 	nameTab=name.split('');
   
 	number="";
-	for ( a=nameTab.length-1; a>=1; a--) {
+	for ( a=nameTab.length-1; a>=0; a--) {
 
 		item=Math.abs(nameTab[a]); 
     
