@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name inc-dec
 // @namespace Violentmonkey Scripts
+// @updateURL https://laurentrogez.github.io/inc-dec/inc-dec.js
 // @match *://*/*
 // @version 0.1
 // @grant none
