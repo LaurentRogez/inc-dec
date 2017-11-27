@@ -3,12 +3,12 @@
 // @namespace Violentmonkey Scripts
 // @updateURL https://laurentrogez.github.io/inc-dec/inc-dec.user.js
 // @match *://*/*
-// @version 0.1.1
+// @version 0.1.2
 // @grant none
 // ==/UserScript==
 // 
 
-// Coucou
+// Coucou ou pas
 
 document.onkeypress=function (e) { 
 	e=e || window.event; 
