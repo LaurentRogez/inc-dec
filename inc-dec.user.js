@@ -45,13 +45,30 @@ function urlNew(){
   	
 	if ( number==1 && c==-1 ) { return;} // ne pas décrémenter sous 1
   
+  
+  
+  d=number.length;
+  
+  e=String(Math.abs(number)).length;
+  
+  f=d-e;
+  
+  zero="";
+  for (z=0; z<f; z++) {
+    zero=zero+"0";
+  }
+  
+ // alert(zero); return;
+  
+  
+  
 	nameTab=name.split(number); // Split sur le nombre trouvé
   
 	nameTabLastItem=nameTab.pop(); // Suppression et stockage des éventuels caractères après number, ex : le nombre entre parenthèse
   
 	numberNew=Math.abs(number)+c; // Le nouveau nombre incrémenté ou décrémenté
   
-	nameNew=nameTab.join(number)+numberNew; // Le nouveau nom de fichier
+	nameNew=nameTab.join(number)+zero+numberNew; // Le nouveau nom de fichier
   
 	urlNew=fileUrlBase+"/"+nameNew+nameTabLastItem+"."+ext; // Reconstruction de l'url modifié
  
