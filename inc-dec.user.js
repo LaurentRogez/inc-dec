@@ -52,13 +52,31 @@ function urlNew(){
   e=String(Math.abs(number)).length;
   
   f=d-e;
+
+  if ( c==-1 ) {
+            
+    g=String(Math.abs(number)).replace(/0/g,""); // converti 10, 100, 1000 etc. en 1
+  
+    if ( g==1 ) { f=f+1; }
+  }
+  
+  if ( c==1 ) {
+        
+    g=String(Math.abs(number)).replace(/9/g,""); // converti 9, 99, 999 etc. en ""
+    
+    if ( g=="" )f=f-1;
+
+  }
   
   zero="";
   for (z=0; z<f; z++) {
     zero=zero+"0";
   }
   
- // alert(zero); return;
+ 
+  
+  
+  //alert(zero); return;
   
   
   
