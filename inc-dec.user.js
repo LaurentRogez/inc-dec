@@ -43,16 +43,17 @@ function urlNew(){
 		if ( !Number.isInteger(item) && number!="" ) break; // Stop si item n'est pas un chiffre avant le nombre trouvé
 	}
   	
-	if ( number==1 && c==-1 ) { return;} // ne pas décrémenter sous 1
+	if ( number==1 && c==-1 ) { return;} // ne pas décrémenter sous 1.jpg
   
   
   
-  d=number.length;
+  d=number.length; // Compter les décimales avec les zéros (0123)
   
-  e=String(Math.abs(number)).length;
+  e=String(Math.abs(number)).length; // Compter les décimales sans les zéros (123)
   
-  f=d-e;
+  f=d-e; // Le nombre de zéros
 
+  // DEC
   if ( c==-1 ) {
             
     g=String(Math.abs(number)).replace(/0/g,""); // converti 10, 100, 1000 etc. en 1
@@ -60,6 +61,7 @@ function urlNew(){
     if ( g==1 ) { f=f+1; }
   }
   
+  // INC
   if ( c==1 ) {
         
     g=String(Math.abs(number)).replace(/9/g,""); // converti 9, 99, 999 etc. en ""
