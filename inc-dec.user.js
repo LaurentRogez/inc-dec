@@ -75,12 +75,6 @@ function urlNew(){
     zero=zero+"0";
   }
   
- 
-  
-  
-  //alert(zero); return;
-  
-  
   
 	nameTab=name.split(number); // Split sur le nombre trouvé
   
@@ -92,7 +86,19 @@ function urlNew(){
   
 	urlNew=fileUrlBase+"/"+nameNew+nameTabLastItem+"."+ext; // Reconstruction de l'url modifié
  
-	window.location=urlNew; // Go
+  
+  UrlExists(urlNew); // GO
+    
 }
 
+// Teste si l'URL existe
+function UrlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    if (http.status != 404)
+        window.location=urlNew;
+    else
+        window.location.reload();
+}
 
