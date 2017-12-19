@@ -16,9 +16,13 @@ document.onkeypress=function (e) {
 	var charCode=e.charCode || e.keyCode, 
 	character=String.fromCharCode(charCode); 
 	
-	if(charCode==37) { c=-1; urlNew(); } // DEC
-  	
-	if(charCode==39) { c=1; urlNew();}	// INC
+  // +/- 1
+  if(charCode==37) { c=-1; urlNew(); } // DEC
+  if(charCode==39) { c=1; urlNew();}	// INC
+  
+  // +/- 15
+  if(charCode==40) { c=-15; urlNew(); } // DEC
+  if(charCode==38) { c=15; urlNew();}	// INC
 }
 
 
