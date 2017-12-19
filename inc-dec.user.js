@@ -3,7 +3,7 @@
 // @namespace Violentmonkey Scripts
 // @updateURL https://laurentrogez.github.io/inc-dec/inc-dec.user.js
 // @match *://*/*
-// @version 0.3
+// @version 0.3.1
 // @grant none
 // ==/UserScript==
 // 
